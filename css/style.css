@@ -700,7 +700,6 @@ input {
 
 .transictions-list__table-col:last-child {
   width: 100px;
-  text-align: right;
 }
 
 .transictions-list__num {
@@ -1888,32 +1887,7 @@ input {
 
 @media (max-width: 1200px) {
   .transictions-list__table-row {
-    padding: 0;
-    display: block;
-  }
-
-  .transictions-list__table-header {
-    display: none;
-  }
-
-  .transictions-list__table-col {
-    width: 100%;
-    border-bottom: 1px solid #333863;
-    padding: 15px 40px 10px 33px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .transictions-list__table-col::before {
-    content: attr(data-title);
-    margin-right: 10px;
-  }
-
-  .transictions-list__table-col:last-child {
-    border-bottom: none;
-    width: 100%;
-    text-align: left;
+    padding: 15px 10px 10px 10px;
   }
 
   .transictions-list__btn {
@@ -1977,6 +1951,10 @@ input {
   .transiction svg {
     right: 15px;
   }
+
+  .transictions-list {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2020,10 +1998,6 @@ input {
 
   .player-block__down {
     padding: 20px;
-  }
-
-  .transictions-list__table-col {
-    padding: 15px 15px 10px;
   }
 
   .support-table__down {
@@ -2097,6 +2071,26 @@ input {
 
   .player-block__up {
     display: none;
+  }
+
+  .transictions-list__table-row {
+    font-size: 14px;
+  }
+
+  .transictions-list__table-col {
+    padding: 0 2px;
+  }
+
+  .transictions-list__table-col:nth-child(3) {
+    width: 63px;
+  }
+
+  .transictions-list__num {
+    font-size: 12px;
+  }
+
+  .transictions-list__btn {
+    padding: 2px 3px;
   }
 
   .FAQ-item__header {
@@ -2179,6 +2173,10 @@ input {
 
   .player-block__photo {
     margin-right: 15px;
+  }
+
+  .transictions-list__table-col:last-child {
+    width: 55px;
   }
 
   .winner-banner__player-photo {
