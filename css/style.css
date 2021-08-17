@@ -344,6 +344,9 @@ input {
 }
 
 .aside__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 15px 28px 10px 40px;
   background: #292845;
   border: 1px solid #333863;
@@ -409,13 +412,60 @@ input {
   font-weight: 400;
 }
 
-.aside-person .personal-cabinet__exit {
-  position: absolute;
-  top: 12px;
-  right: 0;
+.aside__header-left {
+  display: flex;
+}
+
+.personal-cabinet__exit svg {
   width: 24px;
   height: 24px;
   fill: #8189C7;
+}
+
+.aside-burger {
+  display: none;
+  position: relative;
+  top: 0;
+  right: 0px;
+  width: 34px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.aside-burger span {
+  position: absolute;
+  transition: all .3s ease 0s;
+  top: calc(50% - 1px);
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #8189C7;
+  display: block;
+  border-radius: 2px;
+}
+
+.aside-burger span:first-child {
+  top: 0;
+}
+
+.aside-burger span:last-child {
+  top: auto;
+  bottom: 0;
+}
+
+.aside-burger.active span {
+  transform: scale(0);
+}
+
+.aside-burger.active span:first-child {
+  transform: rotate(-45deg);
+  top: calc(50% - 1px);
+}
+
+.aside-burger.active span:last-child {
+  transform: rotate(45deg);
+  bottom: calc(50% - 2px);
 }
 
 .main-block {
@@ -940,7 +990,7 @@ input {
 }
 
 .game-player:not(:last-child) {
-  margin-right: 3%;
+  margin-right: 1%;
 }
 
 .game-player__name {
@@ -1088,6 +1138,19 @@ input {
   border-color: transparent transparent #DD2DFA transparent;
 }
 
+.roulette__window {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  pointer-events: none;
+  border: 3px solid #DD2DFA;
+  border-radius: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
 .roulette__borders {
   position: absolute;
   top: 0;
@@ -1097,6 +1160,7 @@ input {
   width: 100%;
   height: 100%;
   z-index: 3;
+  pointer-events: none;
 }
 
 .roulette__borders::before {
@@ -1137,8 +1201,24 @@ input {
   border-radius: 10px;
 }
 
-.roulette__item.active {
-  border: 3px solid #DD2DFA;
+.aside__mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  z-index: 99;
+  display: none;
+}
+
+.aside__mobile .aside-burger {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 99;
 }
 
 .winner-banner {
@@ -1743,8 +1823,16 @@ input {
   }
 
   .game-player {
-    width: 47%;
+    width: 49%;
     margin-bottom: 3%;
+  }
+
+  .game-player:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .game-player:not(:last-child):not(:nth-child(2n)) {
+    margin-right: 1%;
   }
 
   .winner-players .game-player {
@@ -1928,7 +2016,20 @@ input {
     display: none;
   }
 
+  .aside {
+    max-width: 100%;
+  }
+
   .aside__nav {
+    display: none;
+  }
+
+  .aside-burger {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .player-block__up {
     display: none;
   }
 

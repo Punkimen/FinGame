@@ -21,7 +21,7 @@
     <div class="container header__container">
         <div class="header__wrapper">
             <a href="index.html" class="header__logo logo">
-                <img src="img/Flogo.svg" alt="Logo">
+                <img src="img/FLogo.svg" alt="Logo">
             </a>
             <div class="header-info">
                 <div class="header-info__label">Room</div>
@@ -64,9 +64,18 @@
                 <div class="aside-person__name player-name">Nick Name</div>
                 <div class="aside-person__balance player-balance">0.000100 FINE</div>
             </div>
-            <svg class="personal-cabinet__exit">
-                <use xlink:href="./img/icons/icons.svg#exit"></use>
-            </svg>
+        </div>
+        <div class="aside__header-left">
+            <button class=" personal-cabinet__exit btn">
+                <svg class="">
+                    <use xlink:href="./img/icons/icons.svg#exit"></use>
+                </svg>
+            </button>
+            <button class="aside-burger btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </div>
     <nav class="aside__nav">
@@ -139,6 +148,82 @@
         </ul>
     </nav>
 </aside>
+<div class="aside__mobile bg-light">
+    <nav class="aside__nav">
+        <ul class="aside__list">
+            <li class="aside__elem current">
+                <a href="index.html" class="aside__link">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#home"></use>
+                    </svg>
+                    <span>Main</span>
+                </a>
+            </li>
+            <li class="aside__elem">
+                <a href="" class="aside__link">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#user"></use>
+                    </svg>
+                    <span>Personal Area
+                    </span>
+                </a>
+            </li>
+            <li class="aside__elem">
+                <a href="" class="aside__link">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#plus"></use>
+                    </svg>
+                    <span>Wallet</span>
+                </a>
+            </li>
+            <li class="aside__elem">
+                <a href="" class="aside__link">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#dollar"></use>
+                    </svg>
+                    <span> Buy FINE Token</span>
+                </a>
+            </li>
+            <li class="aside__elem">
+                <a href="" class="aside__link">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#card"></use>
+                    </svg>
+                    <span>Latest payouts</span>
+                </a>
+            </li>
+            <li class="aside__elem">
+                <a href="FAQ.html" class="aside__link">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#attention"></use>
+                    </svg>
+                    <span>FAQ</span>
+                </a>
+            </li>
+            <li class="aside__elem">
+                <a href="support.html" class="aside__link">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#user"></use>
+                    </svg>
+                    <span>Support</span>
+                </a>
+            </li>
+            <li class="aside__elem">
+                <a href="transictions.html" class="aside__link">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#transiction"></use>
+                    </svg>
+                    <span>Transaction</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <button class="aside-burger btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
                         <div class="main__content">
                             <div class="main-block">
                                 <div class="player-block border-block main-block__item">
@@ -230,7 +315,7 @@
         <footer class="footer">
             <div class="container"></div>
         </footer>
-        <div class="popups-inner">
+        <div class="popups-inner" style="display: none;">
             <div id="popup-password" class="popup border-block">
                 <div class="popup__header bg-dark">Password change
                 </div>
@@ -388,7 +473,7 @@
                     </div>
                 </div>
             </div>
-            <div id="popup-send" class="popup border-block" style="display: block;">
+            <div id="popup-send" class="popup border-block">
                 <div class="popup__header bg-dark popup-balance__header">
                     <div class="popup-wallet__name">
                         <div class="popup-wallet__icon">
