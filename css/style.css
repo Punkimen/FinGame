@@ -335,6 +335,40 @@ input {
   width: 100%;
 }
 
+.header--newUsers .header__wrapper {
+  max-width: 1220px;
+}
+
+.header--newUsers .header-info {
+  max-width: 770px;
+}
+
+.header--newUsers .header-info__item {
+  display: flex;
+  align-items: center;
+}
+
+.header--newUsers .header-info__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header--newUsers .header-info__item-num {
+  font-weight: 500;
+  padding: 7px 12px 6px;
+  background: rgba(203, 55, 255, 0.16);
+  border: 1px solid #CB37FF;
+  border-radius: 7px;
+  margin-right: 5px;
+}
+
+.header--newUsers .header-info__item-label {
+  font-weight: 500;
+  padding: 7px 12px 6px;
+  background: rgba(203, 55, 255, 0.16);
+  border: 1px solid #CB37FF;
+  border-radius: 7px;
+}
+
 .aside {
   max-width: 356px;
   width: 100%;
@@ -399,6 +433,10 @@ input {
 
 .aside-person__photo {
   margin-right: 20px;
+  width: 47px;
+  height: 47px;
+  background: #222139;
+  border-radius: 50%;
 }
 
 .aside-person__name {
@@ -1959,6 +1997,15 @@ input {
     margin-right: 10px;
   }
 
+  .header--newUsers .header-info__item {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .header--newUsers .header-info__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
   .aside__header {
     padding: 15px 20px 10px 20px;
   }
@@ -2014,6 +2061,25 @@ input {
 
   .header-info__status svg {
     display: none;
+  }
+
+  .header--newUsers .header-info__wrapper {
+    display: block;
+  }
+
+  .header--newUsers .header-info__item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .header--newUsers .header-info__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .header--newUsers .header-info__item-label {
+    max-width: 100%;
+    width: 100%;
   }
 
   .aside {
